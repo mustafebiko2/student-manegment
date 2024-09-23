@@ -4,7 +4,11 @@ from flask_migrate import Migrate
 
 app = Flask(__name__)
 
-config
+#configure database connection
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///student.db'
+
+#link our app database
+db.init_app(app)
 
 
 migrate = Migrate(app, db)
