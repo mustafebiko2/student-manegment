@@ -1,6 +1,13 @@
 from flask import Flask
+from models import db
+from flask_migrate import Migrate
 
 app = Flask(__name__)
+
+config
+
+
+migrate = Migrate(app, db)
 
 
 @app.get('/')

@@ -11,4 +11,10 @@ db = SQLAlchemy(metadata=metadate)
 #define models
 class students(db.Model):
     #define table
-    pass
+    __tablename__ = "students"
+
+    id = db.Column(db.integer, primary_key=True)
+    first_name = db.Column(db.text, nullable=False)
+    last_name = db.Column(db.text, nullable=False)
+    email = db.Column(db.string, nullable=False)
+    phone = db.Column(db.integer, nullable, unique=True)
