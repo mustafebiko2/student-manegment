@@ -2,19 +2,19 @@ from sqlalchemy import MetaData
 from flask_sqlalchemy import SQLAlchemy
 
 
-#intialize metadate
-metadate = MetaData()
+# Initialize metadata
+metadata = MetaData()
 
-db = SQLAlchemy(metadata=metadate)
+db = SQLAlchemy(metadata=metadata)
 
 
-#define models
-class students(db.Model):
-    #define table
+# Define models
+class Student(db.Model): 
+    # Define table
     __tablename__ = "students"
 
-    id = db.Column(db.integer, primary_key=True)
-    first_name = db.Column(db.text, nullable=False)
-    last_name = db.Column(db.text, nullable=False)
-    email = db.Column(db.string, nullable=False)
-    phone = db.Column(db.integer, nullable, unique=True)
+    id = db.Column(db.Integer, primary_key=True)  
+    first_name = db.Column(db.String, nullable=False) 
+    last_name = db.Column(db.String, nullable=False)   
+    email = db.Column(db.String, nullable=False, unique=True) 
+    phone = db.Column(db.String, nullable=False, unique=True)  

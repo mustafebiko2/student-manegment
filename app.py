@@ -10,7 +10,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///student.db'
 #link our app database
 db.init_app(app)
 
-
+#set up migrate tool
 migrate = Migrate(app, db)
 
 
